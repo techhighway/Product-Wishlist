@@ -16,7 +16,7 @@ OpenERP E-Commerce
         'views/wishlist_template_view.xml',
     		],
     	'qweb'	: ['static/src/xml/*.xml'],
-	'images': ['static/description/website_sale_home.png'],
+	'images': ['static/description/wishlist_home.png.png'], 
     	'installable': True,
     	'application': True,
 }
