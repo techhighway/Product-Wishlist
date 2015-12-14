@@ -1,5 +1,10 @@
 
-$(document).ready(function () {
+$(document).ready(function (require) {
+
+odoo.define('website_sale.cart', function (require) {
+"use strict";
+var ajax = require('web.ajax');
+
 $('.oe_website_sale').each(function () {
     var $oe_website_sale = this;
 
@@ -10,7 +15,7 @@ $($oe_website_sale).on("change", ".oe_cart input.js_quantity", function (ev) {
         var value = parseInt($input.val(), 10);
         var line_id = parseInt($input.data('line-id'),10);
         if (isNaN(value)) value = 0;
-        openerp.jsonRpc("/shop/cart/update_json", 'call', {
+        ajax.jsonRpc("/shop/cart/update_json", 'call', {
             'line_id': line_id,
             'product_id': parseInt($input.data('product-id'),10),
             'set_qty': value})
@@ -30,6 +35,7 @@ $($oe_website_sale).on("change", ".oe_cart input.js_quantity", function (ev) {
             });
             return false;
     });
+});
 });
 });
 

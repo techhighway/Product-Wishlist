@@ -31,8 +31,8 @@
 		         		style="width:90% !important;">
                       <thead>
                           <tr>
-                              <th colspan="2" width="100">Product</th>
-                              <th width="100">Price</th>
+                              <th colspan="2" width="500" style="text-align: center;">Product</th>
+                              <th width="100" style="text-align: center;">Price</th>
                               <th width="120"></th>
                           </tr>
                       </thead>
