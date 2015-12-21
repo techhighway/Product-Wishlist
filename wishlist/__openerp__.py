@@ -5,7 +5,7 @@
     'website': 'https://www.techhighway.co.in',
     'version': '1.0',
     'description': """
-OpenERP E-Commerce
+OpenERP E-Commerce  
 ==================
 
         """,
