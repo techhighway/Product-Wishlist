@@ -22,6 +22,7 @@
 <template id="product_wish_list" inherit_id="website_sale.product" name="Header">
 	<xpath expr="//a[@id='add_to_cart']" position="before">  
 		<div style="margin-bottom: 0px !important;">	
+			<input type="hidden" name="wishlist_product_id" id="wishlist_product_id" t-att-value="product.product_variant_ids[0].id"/>
 			<t t-set="int_prod_qty" t-value="website.is_product_in_wishlist(product.product_variant_ids[0].id)"/> 
 			<a onclick ="add_product_to_wishlist();" id ="wishlist_icon" class="fa fa-shopping-wishlist_new"/>
 			<a id="add_to_wishlist" onclick='add_product_to_wishlist();' href="#">Add to Wishlist</a>

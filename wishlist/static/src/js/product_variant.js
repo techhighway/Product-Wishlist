@@ -79,9 +79,8 @@ $('.oe_website_sale').each(function () {
             $parent.find("ul:not(:has(input.js_variant_change[value='" + id + "'])) input.js_variant_change:checked, select").each(function () {
                 values.push(+$(this).val());
                 console.log(product_id);
-		//alert(product_id);
-		result = check_for_variant(product_id);
             });
+			result = check_for_variant(product_id);
 
             for (var k in variant_ids) {
                 if (!_.difference(values, variant_ids[k][1]).length) {

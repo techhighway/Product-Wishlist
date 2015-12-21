@@ -1,5 +1,6 @@
 
 $(document).ready(function (require) {
+onload_hide_wishlise_icon();
 
 odoo.define('website_sale.cart', function (require) {
 "use strict";
@@ -73,15 +74,13 @@ function onload_hide_wishlise_icon() {
 	//alert(window.location.href);
 	if(url.indexOf('/shop/product/') != -1){
 	    //console.log("create post is working!");
-		var product_id = document.getElementsByName("product_id")[0].value;
+		var product_id = document.getElementById("wishlist_product_id").value;
 		//alert(product_id);
 		if (product_id){
 			check_for_variant(product_id);
 		}
 	}
 	};
-onload_hide_wishlise_icon();
-
 
 
 
